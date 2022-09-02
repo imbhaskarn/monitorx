@@ -6,10 +6,12 @@ module.exports = ({ clear = true }) => {
 	unhandled();
 	welcome({
 		title: `monitorx`,
+		tagLine: `by Bhaskar`,
+		description: pkg.description,
 		version: pkg.version,
 		bgColor: '#36BB09',
 		color: '#000000',
-		bold: false,
+		bold: true,
 		clear
 	});
 };

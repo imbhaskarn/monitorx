@@ -1,11 +1,10 @@
 {
 	"name": "monitorx",
-	"description": "Simple system monitoring cli package",
+	"description": "Simple system monitoring package",
 	"version": "0.0.1",
 	"license": "MIT",
 	"bin": {
-		"monitorx": "index.js",
-		"monx": "index.js"
+		"monitorx": "index.js"
 	},
 	"author": {
 		"name": "Bhaskar",

@@ -2,7 +2,7 @@
 
 /**
  * monitorx
- * Simple system monitoring cli package
+ * Simple system monitoring package
  *
  * @author Bhaskar <https://github.com/imbhaskarn>
  */
@@ -15,13 +15,9 @@ const input = cli.input;
 const flags = cli.flags;
 const { clear, debug } = flags;
 
-const os = require('os');
-
 (async () => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
-	if(input.includes(`os`)){
-		console.log(os.hostname())
-	}
+
 	debug && log(flags);
 })();
