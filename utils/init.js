@@ -6,6 +6,6 @@ const chalk = require('chalk')
 module.exports = () => {
 	unhandled();
 	console.log(
-	chalk.underline.blue(`Monitorx Cli ${pkg.version}`)
+	chalk.underline.bold.blue(`Monitorx Cli ${pkg.version}\n`)
 	)
 };

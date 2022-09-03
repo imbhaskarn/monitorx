@@ -11,23 +11,23 @@ const init = require('./utils/init');
 const cli = require('./utils/cli');
 const log = require('./utils/log');
 
-const {osuser, osinfo} = require('./utils/basic')
+const {osuser, osinfo, invalidArg} = require('./utils/basic')
 
 const input = cli.input;
 const flags = cli.flags;
-const { clear, debug } = flags;
+const { debug } = flags;
 
 (async () => {
-	init({ clear });
+	init({  });
 	input.includes(`help`) && cli.showHelp(0);
 
-	if(input.includes('osuser')){
+	if(input.includes('userinfo')){
 		osuser()
 	}
 
 	if(input.includes('osinfo')){
-		osinfo()
+		return osinfo()
 	}
-
+	return invalidArg()
 	debug && log(flags);
 })();
