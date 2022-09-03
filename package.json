@@ -1,7 +1,7 @@
 {
 	"name": "monitorx",
 	"description": "Simple system monitoring package",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"bin": {
 		"monitorx": "index.js"

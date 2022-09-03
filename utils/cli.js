@@ -1,17 +1,15 @@
 const meow = require('meow');
 const meowHelp = require('cli-meow-help');
 
+const os = require('os')
+
+
 const flags = {
 	clear: {
 		type: `boolean`,
-		default: true,
+		default: false,
 		alias: `c`,
 		desc: `Clear the console`
-	},
-	noClear: {
-		type: `boolean`,
-		default: false,
-		desc: `Don't clear the console`
 	},
 	debug: {
 		type: `boolean`,
@@ -24,10 +22,11 @@ const flags = {
 		alias: `v`,
 		desc: `Print CLI version`
 	}
+
 };
 
 const commands = {
-	help: { desc: `Print help info` }
+	help: { desc: `Print help info` },
 };
 
 const helpText = meowHelp({
@@ -37,7 +36,7 @@ const helpText = meowHelp({
 });
 
 const options = {
-	inferType: true,
+	// inferType: true,
 	description: false,
 	hardRejection: false,
 	flags
