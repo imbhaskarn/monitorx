@@ -13,7 +13,8 @@ const osinfo = () =>{
         platform: os.platform(),
         totalMemory: os.totalmem(),
         freeMemory: os.freemem(),
-        totalCpu: os.cpus().length
+        totalCpu: os.cpus().length,
+        arch: os.arch()
     })
 }
 

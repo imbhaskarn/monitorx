@@ -1,16 +1,11 @@
-const welcome = require('cli-welcome');
+// const welcome = require('cli-welcome');
 const pkg = require('./../package.json');
 const unhandled = require('cli-handle-unhandled');
+const chalk = require('chalk')
 
-module.exports = ({ clear = true }) => {
+module.exports = () => {
 	unhandled();
-	welcome({
-		title: `monitorx`,
-		description: pkg.description,
-		version: pkg.version,
-		bgColor: '#36BB09',
-		color: '#000000',
-		bold: true,
-		clear
-	});
+	console.log(
+	chalk.underline.blue(`Monitorx Cli ${pkg.version}`)
+	)
 };
