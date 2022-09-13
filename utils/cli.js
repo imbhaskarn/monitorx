@@ -11,12 +11,6 @@ const flags = {
 		alias: `c`,
 		desc: `Clear the console`
 	},
-	debug: {
-		type: `boolean`,
-		default: false,
-		alias: `d`,
-		desc: `Print debug info`
-	},
 	version: {
 		type: `boolean`,
 		alias: `v`,
@@ -36,9 +30,9 @@ const helpText = meowHelp({
 });
 
 const options = {
-	// inferType: true,
+	inferType: true,
 	description: false,
-	hardRejection: false,
+	hardRejection: true,
 	flags
 };
 

@@ -15,19 +15,17 @@ const {osuser, osinfo, invalidArg} = require('./utils/basic')
 
 const input = cli.input;
 const flags = cli.flags;
-const { debug } = flags;
 
 (async () => {
 	init({  });
 	input.includes(`help`) && cli.showHelp(0);
 
 	if(input.includes('userinfo')){
-		osuser()
+		return osuser()
 	}
 
 	if(input.includes('osinfo')){
 		return osinfo()
 	}
-	return invalidArg()
-	debug && log(flags);
+	invalidArg()
 })();
