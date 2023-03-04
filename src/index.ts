@@ -1,13 +1,14 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env node
+import { Command } from "commander";
 
-import {Command} from 'commander';
-const program = new Command() 
+const program = new Command();
+
 program
-  .command('hi')
-  .description('Say hello')
-  .option('-c, --color [color]', 'Specify a color')
-  .action((name: string, cmd: any) => {
-    const color = cmd.color || 'blue';
-    console.log(`Hello, ${name}! Your favorite color is ${color}.`);
-  });
+  .version("1.0.0")
+  .description("An example CLI for managing a directory")
+  .option("-l, --ls  [value]", "List directory contents")
+  .option("-m, --mkdir <value>", "Create a directory")
+  .option("-t, --touch <value>", "Create a file")
+  .parse(process.argv);
 
+const options = program.opts();
