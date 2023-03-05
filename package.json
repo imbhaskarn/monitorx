@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "ts-node ./bin/cli.ts"
+    "dev": "tsc && npm i -g ."
   },
   "repository": {
     "type": "git",
